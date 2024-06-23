@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import "./navbar.css";
-=======
-import React, { useState } from "react";
-import "./Navbar.css";
->>>>>>> refs/remotes/origin/main
 import asquaredlogo from "../../assets/logo-Asquared.png";
 import { MdLogin } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
