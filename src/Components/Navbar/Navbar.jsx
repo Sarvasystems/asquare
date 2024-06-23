@@ -1,19 +1,29 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import "./navbar.css";
-import asquaredlogo from "../../assets/logo-Asquared.png"
+import asquaredlogo from "../../assets/logo-Asquared.png";
 import { MdLogin } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
-import { TbGridDots } from "react-icons/tb";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 const Navbar = () => {
-  const [active, setActive] = useState('navBar')
+  const [active, setActive] = useState('navBar');
+  const [dropdown, setDropdown] = useState(false);
+
   // Function to toggle Navbar
   const showNav = () => {
-    setActive('navBar activeNavbar')
+    setActive('navBar activeNavbar');
   }
 
   const removeNav = () => {
-    setActive('navBar')
+    setActive('navBar');
+  }
+
+  const handleMouseEnter = () => {
+    setDropdown(true);
+  }
+
+  const handleMouseLeave = () => {
+    setDropdown(false);
   }
 
   return (
@@ -28,10 +38,6 @@ const Navbar = () => {
 
         <div className={active}>
           <ul className='navLists flex'>
-            <li className='navItem'>
-              <a href="/" className='navLink'>Home</a>
-            </li>
-
             <li className='navItem'>
               <a href="/" className='navLink'>Buy</a>
             </li>
@@ -53,12 +59,29 @@ const Navbar = () => {
             </li>
 
             <li className='navItem'>
-              <a href="/" className='navLink'>About</a>
-            </li>
-
-            <li className='navItem'>
               <a href="/" className='navLink'>Contact</a>
             </li>
+
+            <li className='navItem dropdown' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <a href="#" className='navLink'>More <TiArrowSortedDown className='dropdownIcon' /></a>
+              {dropdown && (
+                <ul className='dropdownMenu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                  <li className='dropdownItem'>
+                    <a href="/" className='dropdownLink'>About Us</a>
+                  </li>
+                  <li className='dropdownItem'>
+                    <a href="/" className='dropdownLink'>Mortgages</a>
+                  </li>
+                  <li className='dropdownItem'>
+                    <a href="/" className='dropdownLink'>Communities</a>
+                  </li>
+                  <li className='dropdownItem'>
+                    <a href="/" className='dropdownLink'>Developers</a>
+                  </li>
+                </ul>
+              )}
+            </li>
+
 
             <button className='btn loginbtn'>
               <a href="/"><MdLogin className='login-icon'/></a>
@@ -67,17 +90,17 @@ const Navbar = () => {
           </ul>
 
           <div onClick={removeNav} className='closeNavbar'>
-          <IoIosCloseCircle className='icon' />
+            <IoIosCloseCircle className='icon' />
           </div>
         </div>
 
         <div onClick={showNav} className='toggleNavbar'>
-        <TbGridDots className='icon' />
+          <TiArrowSortedDown className='icon' />
         </div>
 
       </header>
     </section>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

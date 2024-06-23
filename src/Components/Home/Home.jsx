@@ -8,7 +8,7 @@ const Home = () => {
       <section className='hero'>
         <video className='background-video' src={video} autoPlay muted loop></video>
         <div className='container'>
-          <h1>We Open Doors</h1>
+          <h1>Find Your Perfect Place</h1>
           <form className='flex-form'>
             <div className='tabs'>
               <button className='tab'>Rent</button>
