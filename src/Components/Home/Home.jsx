@@ -21,10 +21,25 @@ const Home = () => {
                 <input type='text' placeholder='City, community or building' />
               </div>
               <div className='box'>
-                <input type='text' placeholder='Property type' />
+                <select>
+                  <option value=''>Property type</option>
+                  <option value='apartment'>Apartment</option>
+                  <option value='villa'>Villa</option>
+                  <option value='townhouse'>Townhouse</option>
+                  <option value='penthouse'>Penthouse</option>
+                  <option value='compound'>Compound</option>
+                  <option value='duplex'>Duplex</option>
+                </select>
               </div>
               <div className='box'>
-                <input type='text' placeholder='Beds & Baths' />
+                <select>
+                  <option value=''>Beds & Baths</option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </select>
               </div>
               <button className='search-btn'>
                 <i className='fa fa-search'></i> Search
