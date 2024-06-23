@@ -1,19 +1,15 @@
-import React from 'react';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import Home from './Components/Home/Home';
-import Main from './Components/Main/Main';
-import Footer from './Components/Footer/Footer';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/navbar/Navbar.jsx";
+import Home from "./pages/home/Home.jsx";
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Home/>
-    {/* <Main/>
-    <Footer/> */}
+      <Navbar />
+      <Home />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import "./navbar.css";
+=======
+import React, { useState } from "react";
+import "./Navbar.css";
+>>>>>>> refs/remotes/origin/main
 import asquaredlogo from "../../assets/logo-Asquared.png";
 import { MdLogin } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -27,12 +32,11 @@ const Navbar = () => {
   }
 
   return (
-    <section className='navBarSection'>
-      <header className='header flex'>
-
-        <div className='logoDiv'>
-          <a href="/" className='logo flex'>
-            <img src={asquaredlogo} alt="logo"/>
+    <section className="navBarSection">
+      <header className="header flex">
+        <div className="logoDiv">
+          <a href="/" className="logo flex">
+            <img src={asquaredlogo} alt="logo" />
           </a>
         </div>
 
@@ -42,20 +46,28 @@ const Navbar = () => {
               <a href="/" className='navLink'>Buy</a>
             </li>
 
-            <li className='navItem'>
-              <a href="/" className='navLink'>Rent</a>
+            <li className="navItem">
+              <a href="/" className="navLink">
+                Rent
+              </a>
             </li>
 
-            <li className='navItem'>
-              <a href="/" className='navLink'>Commercial</a>
+            <li className="navItem">
+              <a href="/" className="navLink">
+                Commercial
+              </a>
             </li>
 
-            <li className='navItem'>
-              <a href="/" className='navLink'>Residential</a>
+            <li className="navItem">
+              <a href="/" className="navLink">
+                Residential
+              </a>
             </li>
 
-            <li className='navItem'>
-              <a href="/" className='navLink'>OffPlan</a>
+            <li className="navItem">
+              <a href="/" className="navLink">
+                OffPlan
+              </a>
             </li>
 
             <li className='navItem'>
@@ -97,7 +109,6 @@ const Navbar = () => {
         <div onClick={showNav} className='toggleNavbar'>
           <TiArrowSortedDown className='icon' />
         </div>
-
       </header>
     </section>
   );
